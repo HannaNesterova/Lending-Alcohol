@@ -354,3 +354,9 @@ body { font-family: sans-serif; }
 .product_flex img{
     width: 500px;
 }
+.form{
+    background-image: url('/img/img_section_4.png');
+}
+
+/* FORM SECTION */
+
