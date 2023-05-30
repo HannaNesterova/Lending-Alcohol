@@ -73,25 +73,44 @@ h1, h2, h3, h4, h5, h6 {
 }
 /* //////////////////// */
 .container{
-        margin: 0 70px;
-        padding: 0 20px;
-        box-sizing: border-box;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0px 20px;
       }
 .heading{
-    display: flex;
-    justify-content: space-around;
-    z-index: 3;
-    position: absolute;
+    z-index: 30;
+    position: fixed;
     top: 30px;
     left: 20px;
     width: 100%;
     margin: 0 -50px;
 }
+.header_menu{
+    display: flex;
+    justify-content: space-around;
+}
+.heading::before{
+    content: '';
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 110%;
+    height: 100%;
+    background-color: #996b60a3;
+    padding: 50px 0px;
+    margin: -30px;
+}
 
 .heading_list{
     display: flex;
     justify-content: space-between;
-    gap:30px
+    gap:30px;
+    position: relative;
+    z-index: 3;
+}
+.logo{
+    position: relative;
+    z-index: 3;
 }
 .heading_list li{
     margin-right: 20px;
@@ -359,6 +378,7 @@ body { font-family: sans-serif; }
 .form{
     background-image: url('/img/img_section_4.png');
     margin-top: 100px;
+    height: 500px;
 }
 
 /* FORM SECTION */
@@ -472,3 +492,399 @@ color: aliceblue;
     margin-bottom: 5px;
     color: #bdbdbd;
 }
+
+/* FOOTER */
+footer{
+    background-color: #000000;
+}
+.footer{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+.footer p{
+    margin-left: 10px;
+    color: aliceblue;
+}
+.footer a{
+    color: #bdbdbd;
+}
+
+@media all and (max-width:1310px){
+.product img{
+    width: 310px;
+    margin-top: 0;
+}
+.aperitif img{
+    max-width: 1120px;
+}
+.delivery_img img{
+    width: 700px;
+}
+.product img{
+    width: 400px;
+    height: 400px;
+}
+}
+
+@media all and (max-width:1190px){
+    .main_text{
+        margin-left: 20px;
+    }
+    .ingredients_products{
+        margin-top: 0;
+    }
+    .product img{
+    width: 250px;
+    height: 250px;
+    margin-top: 0;
+}
+.aperitif img{
+    width: 1018px;
+}
+.vine_pic{
+    width: 600px;
+}
+}
+
+@media all and (max-width:1121px){
+.aperitif img {
+    width: 930px;
+}
+.delivery_img img{
+    width: 520px;
+}
+.product_pretitle{
+    width: 450px;
+}
+.product img{
+    width: 360px;
+    height: 360px;
+}
+}
+
+@media all and (max-width:1003px){
+    .vine_pic{
+        width: 540px;
+        height: 760px;
+    }
+    .label_title p{
+        width: 270px;
+    }
+    .ingredients h2{
+        font-size: 40px;
+    }
+    .product img{
+        width: 250px;
+        height: 250px;
+    }
+    .aperitif img{
+        width: 820px;
+    }
+    .delivery_img img{
+        width: 420px;
+    }
+    .product_pretitle h2{
+        font-size: 35px;
+    }
+    .form{
+        margin-top: 0;
+    }
+    .post_flex{
+        gap: 0;
+    }
+    .main_text h1{
+        font-size: 50px;
+        width: 300px;
+    }
+    .post_flex{
+        flex-direction: column;
+    }
+    .add_post{
+        margin-top: 50px;
+    }
+}
+@media all and (max-width:900px){
+    .header_menu{
+        position: fixed;
+        top: -100%;
+        left: 0;
+        width: 110%;
+        height: 100%;
+        background-color: #d33e19;
+        transition: all 0.3s ease 0s;
+    }
+
+    .header_menu.active{
+        top: 0;
+    }
+    .header_menu::before{
+        content:'';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 15%;
+        background-color: #bdbdbd;
+    }
+    .heading_list{
+        position: relative;
+        display: block;
+        padding: 20px 0px 0px 0px;
+        top: 50px;
+
+        }
+        .heading_list.active{
+        top: 0;
+        }
+    .heading_list li{
+        margin: 50px;
+        font-size: 20px;
+    }
+
+    .header_burger{
+        display: block;
+        position: relative;
+        width: 30px;
+        height: 20px;
+        z-index: 5;
+        top: 30px;
+        left: 20px;
+        cursor: pointer;
+    }
+    .header_burger.active::before{
+        transform: rotate(45deg);
+        top: 9px;
+    }
+    .header_burger.active::after{
+        transform: rotate(-45deg);
+        bottom: 9px;
+    }
+    .header_burger.active span{
+        transform: scale(0);
+    }
+
+
+      .header_burger span{
+        content: '';
+        background-color: azure;
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        top: 9px;
+        left: 30px;
+        transition: all 0.3s ease 0s;
+        z-index: 30;
+      }
+     .header_burger::before,
+     .header_burger::after{
+        content: '';
+        background-color: azure;
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        left: 30px;
+        transition: all 0.3s ease 0s;
+        z-index: 30;
+     }
+   .logo{
+    position: relative;
+    top: 15px;
+    right: -30px;
+   }
+     .header_burger::before{
+        top: 0;
+     }
+     .header_burger::after{
+        bottom: 0;
+     }
+    .vine_pic{
+        width: 440px;
+    }
+    .label_title p{
+        width: 250px;
+    }
+   .label_title img{
+    width: 200px;
+   }
+   .ingredients h2{
+    margin-top: 40px;
+   }
+   .product h3{
+    font-size: 20px;
+   }
+   .aperitif img{
+    width: 650px;
+   }
+   .aperitif_text p{
+    width: 420px;
+   }
+   .delivery_flex{
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+   }
+   .product_flex{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   }
+.product img{
+    width: 200px;
+    height: 200px;
+}
+.product_pretitle{
+    margin: 0;
+}
+
+   
+}
+@media all and (max-width:695px){
+    .vine_pic{
+        width: 100%;
+        position: relative;
+    }
+    .main_text{
+        position: absolute;
+        bottom: 0;
+        left: 30%;
+        background-color: #996b60c6;
+        margin: 0 auto;
+        padding: 20px;
+        height: 600px;
+    }
+    .main_section{
+        flex-direction: column;
+    }
+    .main_text h1{
+        font-size: 35px;
+        width: 215px;
+    }
+    .label_preTitle{
+        display: flex;
+        flex-direction: column;
+    }
+    .ingredients_products{
+        display: flex;
+        flex-direction: column;
+    }
+    .product img{
+        width: 300px;
+        height: 300px;
+    }
+    .product{
+        margin: 0;
+    }
+    .aperitif img{
+        width: 410px;
+    }
+    .form_first{
+        width: 350px;
+    }
+    .form_second{
+        width: 450px;
+    }
+    .add_post{
+        margin-left: -76px;
+    }
+    .aperitif_text h3{
+        font-size: 25px;
+    }
+    .heading_list{
+        flex-direction: column;
+        gap: 25px;
+    }
+    .container{
+        margin: 0px 10px;
+    }
+.form_first p{
+    width: 300px;
+    height: 360px;
+}
+.form_second{
+    width: 350px;
+}
+.stay_posted input{
+    width: 300px;
+}
+.stay_posted p{
+    width: 300px;
+}
+.stay_posted{
+    width: 350px;
+}
+.add_post{
+    margin-left: -90px;
+}
+.aperitif_text{
+flex-direction: column;
+align-items: center;
+}
+.product_pretitle h2{
+    width: 350px;
+}
+.product p{
+    width: 350px;
+}
+.product_pretitle{
+    width: 330px;
+}
+.heading::before{
+    width: 120%;
+}
+}
+@media all and (max-width:415px){
+    .ingredients h2{
+        margin-top: 5px;
+        font-size: 30px;
+    }
+    .aperitif img{
+        width: 340px;
+    }
+    .aperitif_text p{
+        width: 320px;
+        margin-top: 10px;
+        text-align: center;
+    }
+    .delivery_img img{
+        width: 340px;
+        margin-top: 0px;
+    }
+    .delivery_text{
+        text-align: center;
+    }
+    .carousel-cell {
+        width: 50%;
+        margin: 0;
+    }
+    .add_post{
+        flex-wrap: wrap;
+    }
+    .stay_posted{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 300px;
+    }
+    .stay_posted button{
+        width: 100px;
+    }
+    .stay_posted input{
+        width: 300px;
+    }
+    .heading::before{
+        width: 110%;
+    }
+    .heading::before{
+        width: 120%;
+    }
+    .header_menu{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .logo{
+        display: none;
+    }
+    }
+
