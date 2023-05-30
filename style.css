@@ -875,10 +875,7 @@ align-items: center;
         width: 250px;
     }
     .heading::before{
-        width: 110%;
-    }
-    .heading::before{
-        width: 120%;
+        width: 115%;
     }
     .header_menu{
         display: flex;
