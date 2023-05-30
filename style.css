@@ -611,7 +611,7 @@ footer{
         left: 0;
         width: 110%;
         height: 100%;
-        background-color: #d33e19;
+        background-color: #6b1f0c;
         transition: all 0.3s ease 0s;
     }
 
@@ -638,8 +638,8 @@ footer{
         top: 0;
         }
     .heading_list li{
-        margin: 50px;
-        font-size: 20px;
+        margin-top: 150px;
+        font-size: 25px;
     }
 
     .header_burger{
@@ -690,7 +690,7 @@ footer{
    .logo{
     position: relative;
     top: 15px;
-    right: -30px;
+    right: 30px;
    }
      .header_burger::before{
         top: 0;
@@ -868,9 +868,11 @@ align-items: center;
     }
     .stay_posted button{
         width: 100px;
+        margin-top: 30px;
+        font-size: 18px;
     }
     .stay_posted input{
-        width: 300px;
+        width: 250px;
     }
     .heading::before{
         width: 110%;
@@ -886,5 +888,10 @@ align-items: center;
     .logo{
         display: none;
     }
+    .heading_list li{
+        margin-top: 20px;
+        font-size: 25px;
+    }
+   
     }
 
