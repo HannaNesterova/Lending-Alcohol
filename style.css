@@ -605,6 +605,9 @@ footer{
     }
 }
 @media all and (max-width:900px){
+    body.lock{
+        overflow: hidden;
+    }
     .header_menu{
         position: fixed;
         top: -200%;
@@ -613,6 +616,7 @@ footer{
         height: 100%;
         background-color: #6b1f0c;
         transition: all 0.3s ease 0s;
+        overflow: auto;
     }
 
     .header_menu.active{
