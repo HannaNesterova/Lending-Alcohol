@@ -607,7 +607,7 @@ footer{
 @media all and (max-width:900px){
     .header_menu{
         position: fixed;
-        top: -100%;
+        top: -200%;
         left: 0;
         width: 110%;
         height: 100%;
@@ -833,7 +833,7 @@ align-items: center;
     width: 120%;
 }
 }
-@media all and (max-width:415px){
+@media all and (max-width:416px){
     .ingredients h2{
         margin-top: 5px;
         font-size: 30px;
@@ -868,14 +868,16 @@ align-items: center;
     }
     .stay_posted button{
         width: 100px;
-        margin-top: 30px;
-        font-size: 18px;
+        margin-top: 10px;
+        font-size: 16px;
+        padding: 7px;
+        background-color: #996B60;
     }
     .stay_posted input{
         width: 250px;
     }
     .heading::before{
-        width: 100%;
+        width: 114%;
     }
     .header_menu{
         display: flex;
@@ -889,6 +891,20 @@ align-items: center;
         margin-top: 20px;
         font-size: 25px;
     }
-   
+    .form_first{
+        width: 300px;
+    }
+    .form_first h3 {
+        font-size: 30px;
+    }
+    .form_second{
+        width: 300px;
+    }
+    .main_text h1{
+    line-height: 35px;
+    }
+    .main_text p{
+        margin-top: 0;
+    }
     }
 
